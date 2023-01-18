@@ -1,8 +1,8 @@
 package sunrise.qa.testcases.companypages;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import sunrise.qa.base.LoginPage;
@@ -20,7 +20,7 @@ public class CompanyPageTest extends TestBase {
 		super();
 	}
 	
-	@BeforeSuite
+	@BeforeClass
 	public void setup()
 	{
 		initialization();
@@ -29,7 +29,7 @@ public class CompanyPageTest extends TestBase {
 		testutil.ValidateUserLogin();
 	}
 	
-	@AfterSuite
+	@AfterClass
 	public void teardown()
 	{
 		driver.quit();

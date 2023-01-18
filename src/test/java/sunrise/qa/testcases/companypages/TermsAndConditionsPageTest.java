@@ -1,8 +1,8 @@
 package sunrise.qa.testcases.companypages;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import sunrise.qa.base.TestBase;
@@ -19,7 +19,7 @@ public class TermsAndConditionsPageTest extends TestBase {
 		super();
 	}
 	
-	@BeforeSuite
+	@BeforeClass
 	public void setup()
 	{
 		initialization();
@@ -28,7 +28,7 @@ public class TermsAndConditionsPageTest extends TestBase {
 		testutil.ValidateUserLogin();
 	}
 	
-	@AfterSuite
+	@AfterClass
 	public void teardown()
 	{
 		driver.quit();
@@ -50,7 +50,7 @@ public class TermsAndConditionsPageTest extends TestBase {
 	public void Verify_MaximumTab_Message() throws InterruptedException
 	{
 		termsandconditionspage.navigate_to_companymodule();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		Assert.assertTrue(termsandconditionspage.max_msg_present());
 		
 		

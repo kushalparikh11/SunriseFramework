@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="sunrise.qa.testcases.companypages.CabinsPageTest">
+        <methods>
+          <include name="Verify_alltabclosed"/>
+          <include name="Verify_Navigation_CompanyPage"/>
+          <include name="Verify_MaximumTab_Message"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- sunrise.qa.testcases.companypages.CabinsPageTest -->
+      <class name="sunrise.qa.testcases.companypages.BankPageTest">
+        <methods>
+          <include name="Verify_alltabclosed"/>
+          <include name="Verify_Navigation_CompanyPage"/>
+          <include name="Verify_MaximumTab_Message"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- sunrise.qa.testcases.companypages.BankPageTest -->
+      <class name="sunrise.qa.testcases.companypages.TermsAndConditionsPageTest">
+        <methods>
+          <include name="Verify_MaximumTab_Message"/>
+          <include name="Verify_Navigation_CompanyPage"/>
+          <include name="teardown"/>
+          <include name="Verify_alltabclosed"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- sunrise.qa.testcases.companypages.TermsAndConditionsPageTest -->
+      <class name="sunrise.qa.testcases.companypages.LoginPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="Verify_UserLogin"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- sunrise.qa.testcases.companypages.LoginPageTest -->
+      <class name="sunrise.qa.testcases.companypages.OwnershipStatusPageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="Verify_alltabclosed"/>
+          <include name="setup"/>
+          <include name="Verify_MaximumTab_Message"/>
+          <include name="Verify_Navigation_CompanyPage"/>
+        </methods>
+      </class> <!-- sunrise.qa.testcases.companypages.OwnershipStatusPageTest -->
+      <class name="sunrise.qa.testcases.companypages.CompanyPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="Verify_MaximumTab_Message"/>
+          <include name="Verify_Navigation_CompanyPage"/>
+          <include name="Verify_alltabclosed"/>
+        </methods>
+      </class> <!-- sunrise.qa.testcases.companypages.CompanyPageTest -->
+      <class name="sunrise.qa.testcases.companypages.CurrencyPageTest">
+        <methods>
+          <include name="Verify_alltabclosed"/>
+          <include name="Verify_MaximumTab_Message"/>
+          <include name="teardown"/>
+          <include name="Verify_Navigation_CompanyPage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- sunrise.qa.testcases.companypages.CurrencyPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
