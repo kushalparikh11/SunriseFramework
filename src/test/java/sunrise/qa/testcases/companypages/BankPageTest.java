@@ -39,7 +39,7 @@ public class BankPageTest extends TestBase {
 	@Test(priority=1,invocationCount=2)
 	public void Verify_Navigation_CompanyPage() throws InterruptedException
 	{
-		bankspage.navigate_to_companymodule();
+		bankspage.navigate_to_module();
 		
 		
 	}
@@ -49,8 +49,8 @@ public class BankPageTest extends TestBase {
 	@Test(priority=2)
 	public void Verify_MaximumTab_Message() throws InterruptedException
 	{
-		bankspage.navigate_to_companymodule();
-		Thread.sleep(1000);
+		bankspage.navigate_to_module();
+		Thread.sleep(2000);
 		Assert.assertTrue(bankspage.max_msg_present());
 		
 		

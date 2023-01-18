@@ -34,7 +34,7 @@ public class OwnershipStatusPage extends TestBase{
 		PageFactory.initElements(driver,this);
 	}
 	
-public void navigate_to_companymodule() throws InterruptedException
+public void navigate_to_module() throws InterruptedException
 {
 	Actions action = new Actions(driver);
 	action.moveToElement(master).perform();

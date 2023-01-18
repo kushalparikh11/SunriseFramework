@@ -37,9 +37,9 @@ public class CurrencyPageTest extends TestBase {
 	
 
 	@Test(priority=1,invocationCount=2)
-	public void Verify_Navigation_CompanyPage() throws InterruptedException
+	public void Verify_Navigation_Page() throws InterruptedException
 	{
-		currencypage.navigate_to_companymodule();
+		currencypage.navigate_to_module();
 		
 		
 	}
@@ -49,7 +49,7 @@ public class CurrencyPageTest extends TestBase {
 	@Test(priority=2)
 	public void Verify_MaximumTab_Message() throws InterruptedException
 	{
-		currencypage.navigate_to_companymodule();
+		currencypage.navigate_to_module();
 		Thread.sleep(1000);
 		Assert.assertTrue(currencypage.max_msg_present());
 		
