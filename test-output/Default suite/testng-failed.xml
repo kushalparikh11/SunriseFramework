@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sunrise.qa.testcases.CompanyPageTest">
+      <class name="sunrise.qa.testcases.BankPageTest">
         <methods>
-          <include name="setup"/>
+          <include name="Verify_alltabclosed"/>
+          <include name="Verify_MaximumTab_Message"/>
           <include name="Verify_Navigation_CompanyPage"/>
+          <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- sunrise.qa.testcases.CompanyPageTest -->
+      </class> <!-- sunrise.qa.testcases.BankPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
