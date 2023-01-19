@@ -37,7 +37,7 @@ public class BankPageTest extends TestBase {
 	
 
 	@Test(priority=1,invocationCount=2)
-	public void Verify_Navigation_CompanyPage() throws InterruptedException
+	public void Verify_Navigation_Page() throws InterruptedException
 	{
 		bankspage.navigate_to_module();
 		

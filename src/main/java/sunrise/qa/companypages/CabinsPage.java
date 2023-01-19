@@ -16,7 +16,7 @@ public class CabinsPage extends TestBase{
 	@FindBy(xpath= "(//span[normalize-space()='Cabins'])[1]")
 	WebElement cabins;
 
-	@FindBy(xpath= "//span[normalize-space()='Maximum tabs reached.']")
+	@FindBy(xpath= "(//span[normalize-space()='Maximum tabs reached.'])[1]")
 	WebElement max_msg;
 	
 	@FindBy(xpath= "(//*[name()='svg'])[2]")

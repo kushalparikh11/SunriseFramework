@@ -16,7 +16,7 @@ public class OwnershipStatusPage extends TestBase{
 	@FindBy(xpath= "(//span[normalize-space()='Ownership Status'])[1]")
 	WebElement ownership_status;
 
-	@FindBy(xpath= "//span[normalize-space()='Maximum tabs reached.']")
+	@FindBy(xpath= "(//span[normalize-space()='Maximum tabs reached.'])[1]")
 	WebElement max_msg;
 	
 	@FindBy(xpath= "(//*[name()='svg'])[2]")

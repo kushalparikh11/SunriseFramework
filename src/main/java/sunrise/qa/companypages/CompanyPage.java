@@ -16,7 +16,7 @@ public class CompanyPage extends TestBase{
 	@FindBy(xpath= "(//span[contains(@class,'ant-menu-title-content')][normalize-space()='Company'])[2]")
 	WebElement company_2;
 
-	@FindBy(xpath= "//span[normalize-space()='Maximum tabs reached.']")
+	@FindBy(xpath= "(//span[normalize-space()='Maximum tabs reached.'])[1]")
 	WebElement max_msg;
 	
 	@FindBy(xpath= "(//*[name()='svg'])[2]")

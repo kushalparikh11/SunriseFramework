@@ -16,7 +16,7 @@ public class TermsAndConditionsPage extends TestBase{
 	@FindBy(xpath= "(//span[normalize-space()='Terms & Conditions'])[1]")
 	WebElement termsandconditions;
 
-	@FindBy(xpath= "//span[normalize-space()='Maximum tabs reached.']")
+	@FindBy(xpath= "(//span[normalize-space()='Maximum tabs reached.'])[1]")
 	WebElement max_msg;
 	
 	@FindBy(xpath= "(//*[name()='svg'])[2]")
