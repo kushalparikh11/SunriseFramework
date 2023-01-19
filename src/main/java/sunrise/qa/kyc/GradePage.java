@@ -10,12 +10,15 @@ import sunrise.qa.base.TestBase;
 public class GradePage extends TestBase{
 	
 	@FindBy(xpath= "//span[normalize-space()='Master']")
+	public
 	WebElement master; 
 	
 	@FindBy(xpath= "(//span[@class='ant-menu-title-content'][normalize-space()='KYC'])[1]")
+	public
 	WebElement kyc;
 	
 	@FindBy(xpath= "(//span[contains(@class,'ant-menu-title-content')][normalize-space()='Grade'])[1]")
+	public
 	WebElement grade;
 
 	@FindBy(xpath= "(//span[normalize-space()='Maximum tabs reached.'])[1]")

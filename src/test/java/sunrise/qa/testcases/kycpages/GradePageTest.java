@@ -39,7 +39,7 @@ public class GradePageTest extends TestBase {
 	@Test(priority=1,invocationCount=2)
 	public void Verify_Navigation_Page() throws InterruptedException
 	{
-		gradepage.navigate_to_module();
+		TestUtil.navigate_to_destination(gradepage.master,gradepage.kyc,gradepage.grade);
 		
 		
 		
