@@ -1,4 +1,4 @@
-package sunrise.qa.contactspages;
+package kyc;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -6,20 +6,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import sunrise.qa.base.TestBase;
-import sunrise.qa.utils.TestUtil;
 
-public class ContactsPage extends TestBase{
+public class DocumentsPage extends TestBase{
 	
 	@FindBy(xpath= "//span[normalize-space()='Master']")
 	WebElement master; 
 	
-	@FindBy(xpath= "(//span[@class='ant-menu-title-content'][normalize-space()='Contacts'])[1]")
-	WebElement contacts;
+	@FindBy(xpath= "(//span[@class='ant-menu-title-content'][normalize-space()='KYC'])[1]")
+	WebElement kyc;
 	
-	@FindBy(xpath= "(//span[@class='ant-menu-title-content'][normalize-space()='Contacts'])[2]")
-	WebElement contacts_2;
+	@FindBy(xpath= "(//span[contains(@class,'ant-menu-title-content')][normalize-space()='Documents'])[1]")
+	WebElement documents;
 
-	@FindBy(css= ".ant-message-custom-content > span:nth-child(2)")
+	@FindBy(xpath= "(//span[normalize-space()='Maximum tabs reached.'])[1]")
 	WebElement max_msg;
 	
 	@FindBy(xpath= "(//*[name()='svg'])[2]")
@@ -32,24 +31,25 @@ public class ContactsPage extends TestBase{
 	public
 	WebElement welcome_msg;
 	
-	public ContactsPage()
+	public DocumentsPage()
 	{
 		PageFactory.initElements(driver,this);
 	}
 	
 public void navigate_to_module() throws InterruptedException
 {
-	TestUtil.navigate_to_option2(master,contacts,contacts_2);
+	Actions action = new Actions(driver);
+	action.moveToElement(master).perform();
+	Thread.sleep(2000);
+	action.moveToElement(kyc).perform();
+	Thread.sleep(2000);
+	action.moveToElement(documents).click().perform();
 }
 
-public String max_msg_present() throws InterruptedException
+public boolean max_msg_present()
 
 {
-	TestUtil.navigate_to_option2(master,contacts,contacts_2);
-	TestUtil.navigate_to_option2(master,contacts,contacts_2);
-	Thread.sleep(200);
-	String msg =  max_msg.getText();
-	return msg;
+	return max_msg.isDisplayed();
 	
 }
 

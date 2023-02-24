@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import sunrise.qa.base.TestBase;
-import sunrise.qa.kyc.GradePage;
+import sunrise.qa.kycpages.GradePage;
 import sunrise.qa.utils.TestUtil;
 
 public class GradePageTest extends TestBase {
@@ -24,8 +24,8 @@ public class GradePageTest extends TestBase {
 	{
 		initialization();
 		gradepage = new GradePage();
-		TestUtil testutil = new TestUtil();
-		testutil.ValidateUserLogin();
+		
+		TestUtil.ValidateUserLogin();
 	}
 	
 	@AfterClass
@@ -39,7 +39,7 @@ public class GradePageTest extends TestBase {
 	@Test(priority=1,invocationCount=2)
 	public void Verify_Navigation_Page() throws InterruptedException
 	{
-		TestUtil.navigate_to_destination(gradepage.master,gradepage.kyc,gradepage.grade);
+		TestUtil.navigate_to_option2(gradepage.master,gradepage.kyc,gradepage.grade);
 		
 		
 		

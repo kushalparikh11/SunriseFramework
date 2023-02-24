@@ -1,4 +1,4 @@
-package sunrise.qa.kyc;
+package sunrise.qa.kycpages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;

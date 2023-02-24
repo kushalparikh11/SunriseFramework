@@ -6,8 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import sunrise.qa.base.TestBase;
-
-import sunrise.qa.kyc.DocumentsPage;
+import sunrise.qa.kycpages.DocumentsPage;
 import sunrise.qa.utils.TestUtil;
 
 public class DocumentsPageTest extends TestBase {

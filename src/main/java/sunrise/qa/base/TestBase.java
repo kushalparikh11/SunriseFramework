@@ -10,21 +10,28 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import sunrise.qa.utils.TestUtil;
+import sunrise.qa.utils.WebEventListener;
 
 
+@SuppressWarnings("deprecation")
 public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
+	
+	public  static EventFiringWebDriver e_driver;
+	public static WebEventListener eventListener;
 	
 	
 	public TestBase() {
 		
 		prop = new Properties();
 		try {
-			FileInputStream ip = new FileInputStream("D:\\SunriseAutomation\\src\\main\\java\\sunrise\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("D:\\SunRiseFramework\\SunriseFramework\\src\\main\\java\\sunrise\\qa\\config\\config.properties");
 		prop.load(ip);
 		
 		} catch (FileNotFoundException e) {
@@ -41,7 +48,7 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equalsIgnoreCase("Chrome")){
-			
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equalsIgnoreCase("Firefox")){
@@ -59,7 +66,11 @@ public class TestBase {
 		}
 		
 		
-		
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+		eventListener = new WebEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;
 		
 		
 		driver.manage().window().maximize();

@@ -25,8 +25,8 @@ public class ContactPageTest extends TestBase {
 	{
 		initialization();
 		contactpage = new ContactsPage();
-		TestUtil testutil = new TestUtil();
-		testutil.ValidateUserLogin();
+		
+		TestUtil.ValidateUserLogin();
 	}
 	
 	@AfterClass
@@ -37,7 +37,7 @@ public class ContactPageTest extends TestBase {
 	
 	
 
-	@Test(priority=1,invocationCount=2)
+	@Test(priority=1)
 	public void Verify_Navigation_Page() throws InterruptedException
 	{
 		contactpage.navigate_to_module();
@@ -45,24 +45,15 @@ public class ContactPageTest extends TestBase {
 		
 	}
 	
-	
-
 	@Test(priority=2)
 	public void Verify_MaximumTab_Message() throws InterruptedException
 	{
-		contactpage.navigate_to_module();
-		Thread.sleep(2000);
-		Assert.assertTrue(contactpage.max_msg_present());
-		
-		
-		
-		
-}
+		Assert.assertEquals(contactpage.max_msg_present(),"Maximum tabs reached.");
+	}
 	
 	@Test(priority=3)
 	public void Verify_alltabclosed() throws InterruptedException
 	{
-		
 		contactpage.tab_close();
 		Thread.sleep(2000);
 		Assert.assertTrue(contactpage.welcome_msg.isDisplayed());

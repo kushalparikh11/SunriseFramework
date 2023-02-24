@@ -1,17 +1,14 @@
 package sunrise.qa.dummy;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class dummytest  {
 	
@@ -19,6 +16,7 @@ public class dummytest  {
 	
 	@Test
     public void eightComponents() throws InterruptedException, AWTException {
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(); 
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
@@ -28,9 +26,7 @@ public class dummytest  {
 		driver.findElement(By.xpath("//input[@placeholder='Enter Password']")).sendKeys("Sunrise@123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//span[normalize-space()='Manual File'])[1]")).click();
-		 driver.findElement(By.xpath("(//input[contains(@type,'file')])[1]")).sendKeys("C:\\Users\\dell\\Downloads\\test.csv");
+		
 		   
         
         
