@@ -5,8 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import sunrise.master.contactspages.ReferenceMediaPage;
 import sunrise.qa.base.TestBase;
-import sunrise.qa.contactspages.ReferenceMediaPage;
 import sunrise.qa.utils.TestUtil;
 
 public class ReferenceMediaPageTest extends TestBase {

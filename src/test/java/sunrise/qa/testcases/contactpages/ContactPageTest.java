@@ -5,9 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import sunrise.master.contactspages.ContactsPage;
 import sunrise.qa.base.TestBase;
-
-import sunrise.qa.contactspages.ContactsPage;
 import sunrise.qa.utils.TestUtil;
 
 public class ContactPageTest extends TestBase {
@@ -29,11 +28,11 @@ public class ContactPageTest extends TestBase {
 		TestUtil.ValidateUserLogin();
 	}
 	
-	@AfterClass
-	public void teardown()
-	{
-		driver.quit();
-	}
+//	@AfterClass
+//	public void teardown()
+//	{
+//		driver.quit();
+//	}
 	
 	
 
@@ -58,5 +57,12 @@ public class ContactPageTest extends TestBase {
 		Thread.sleep(2000);
 		Assert.assertTrue(contactpage.welcome_msg.isDisplayed());
 	}
+	
+	@Test(priority=4)
+	public void Verify_recordAddedWithoutAllDataEntered() throws InterruptedException
+	{
+		contactpage.DataEntry_Without_AllDataEnetered();
+	}
 
+	
 }

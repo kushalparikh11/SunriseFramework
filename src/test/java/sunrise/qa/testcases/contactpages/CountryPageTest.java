@@ -5,9 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import sunrise.master.contactspages.CountryPage;
 import sunrise.qa.base.TestBase;
-
-import sunrise.qa.contactspages.CountryPage;
 import sunrise.qa.utils.TestUtil;
 
 public class CountryPageTest extends TestBase {

@@ -5,9 +5,8 @@
     <classes>
       <class name="sunrise.qa.testcases.contactpages.ContactPageTest">
         <methods>
-          <include name="Verify_MaximumTab_Message"/>
           <include name="setup"/>
-          <include name="teardown"/>
+          <include name="Verify_recordAddedWithoutAllDataEntered"/>
         </methods>
       </class> <!-- sunrise.qa.testcases.contactpages.ContactPageTest -->
     </classes>

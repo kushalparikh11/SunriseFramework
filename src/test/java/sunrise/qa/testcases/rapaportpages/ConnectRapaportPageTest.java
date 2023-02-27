@@ -5,8 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import sunrise.master.rapaportpages.ConnectRapaportPage;
 import sunrise.qa.base.TestBase;
-import sunrise.qa.rapaportpages.ConnectRapaportPage;
 import sunrise.qa.utils.TestUtil;
 
 public class ConnectRapaportPageTest extends TestBase {

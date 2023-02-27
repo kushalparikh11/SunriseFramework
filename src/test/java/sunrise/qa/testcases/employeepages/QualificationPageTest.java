@@ -5,9 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import sunrise.master.employeepages.QualificationPage;
 import sunrise.qa.base.TestBase;
-import sunrise.qa.employeepages.QualificationPage;
-
 import sunrise.qa.utils.TestUtil;
 
 public class QualificationPageTest  extends TestBase {

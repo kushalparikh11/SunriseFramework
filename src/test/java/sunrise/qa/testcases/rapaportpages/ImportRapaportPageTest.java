@@ -5,8 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import sunrise.master.rapaportpages.ImportRapaportPage;
 import sunrise.qa.base.TestBase;
-import sunrise.qa.rapaportpages.ImportRapaportPage;
 import sunrise.qa.utils.TestUtil;
 
 public class ImportRapaportPageTest extends TestBase {
