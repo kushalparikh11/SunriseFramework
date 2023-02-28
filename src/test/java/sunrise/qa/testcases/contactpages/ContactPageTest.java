@@ -28,11 +28,12 @@ public class ContactPageTest extends TestBase {
 		TestUtil.ValidateUserLogin();
 	}
 	
-//	@AfterClass
-//	public void teardown()
-//	{
-//		driver.quit();
-//	}
+	@AfterClass
+	public void teardown()
+	{
+		TestUtil.ValidateUserLogout();
+		
+	}
 	
 	
 
@@ -59,10 +60,18 @@ public class ContactPageTest extends TestBase {
 	}
 	
 	@Test(priority=4)
-	public void Verify_recordAddedWithoutAllDataEntered() throws InterruptedException
+	public void Verify_recordAdded_CompanyName() throws InterruptedException
 	{
-		contactpage.DataEntry_Without_AllDataEnetered();
+		contactpage.DataEntry_CompanyName(); //With company name without all data entered.
+		
 	}
-
+	
+	@Test(priority=5)
+	public void Verify_recordAdded_ContactPersonName() throws InterruptedException
+	{
+		contactpage.DataEntry_ContactPersonName(); //With contact person name without all data entered.
+		
+	}
+	
 	
 }

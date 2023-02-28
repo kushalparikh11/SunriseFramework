@@ -6,7 +6,8 @@
       <class name="sunrise.qa.testcases.contactpages.ContactPageTest">
         <methods>
           <include name="setup"/>
-          <include name="Verify_recordAddedWithoutAllDataEntered"/>
+          <include name="teardown"/>
+          <include name="Verify_recordAdded_CompanyName"/>
         </methods>
       </class> <!-- sunrise.qa.testcases.contactpages.ContactPageTest -->
     </classes>

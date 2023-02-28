@@ -52,6 +52,24 @@ public class TestUtil extends TestBase {
 		driver.findElement(By.xpath("//span[normalize-space()='Login']")).click();
 	}
 	
+	public static void ValidateUserLogout() {
+		
+		
+		driver.findElement(By.xpath("//span[@class='ant-avatar ant-avatar-circle']")).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Actions action = new Actions(driver);
+		WebElement logout = driver.findElement(By.xpath("//li[normalize-space()='Logout']"));
+		action.moveToElement(logout).perform();
+		logout.click();
+		
+		
+	}
+	
 // It is used for 2nd level menu navigation
 	
 	public static void navigate_to_option2(WebElement menu,WebElement submenu,WebElement submenu2) throws InterruptedException
