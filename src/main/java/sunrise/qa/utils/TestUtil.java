@@ -28,6 +28,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.github.javafaker.Faker;
+
 import sunrise.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
@@ -318,5 +320,37 @@ public class TestUtil extends TestBase {
 
 		    return generatedString;
 		    
+		}
+		
+		public static String RandomEmailGenerator()
+		{
+			Faker faker = new Faker();
+			String random_email =  faker.internet().emailAddress(); 
+			return random_email;
+		}
+		
+		public static String RandomNameGenerator()
+		{
+			Faker faker = new Faker();
+			String random_name =  faker.name().fullName(); 
+			return random_name;
+		}
+		
+		public static String RandomCompanyGenerator()
+		{
+			Faker faker = new Faker();
+			String random_company =  faker.company().name(); 
+			return random_company;
+		}
+		
+		public static String RandomAddressGenerator()
+		{
+			Faker faker = new Faker();
+			String random_address =  faker.name().fullName()+","
+					+ "\n" + faker.address().streetAddress()+","
+					+"\n" + faker.address().cityName()+","
+					+"\n" + faker.address().zipCode(); 
+			
+			return random_address; 
 		}
 }

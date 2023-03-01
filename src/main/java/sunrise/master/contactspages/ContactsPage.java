@@ -12,6 +12,9 @@ public class ContactsPage extends TestBase{
 	
 	//Random String generated for : Document Number & all 
 	public static String   Common_No_random	= TestUtil.RandomStringGenerator();
+	public static String   Common_No_email	= TestUtil.RandomEmailGenerator();
+	public static String   Common_No_name	= TestUtil.RandomNameGenerator();
+	public static String   Common_No_company	= TestUtil.RandomCompanyGenerator();
 	
 	
 	@FindBy(xpath= "//span[normalize-space()='Master']")
@@ -81,6 +84,52 @@ public class ContactsPage extends TestBase{
 	@FindBy(xpath= "//span[normalize-space()='Contact created successfully']")
 	WebElement Record_success_msg;
 	
+	//Data -Contact detail section tab -1
+	
+	@FindBy(xpath="//textarea[@name='address']")  
+	WebElement address;
+	
+	@FindBy(xpath="//input[@name='tax_id']")  
+	WebElement taxId;
+	
+	@FindBy(xpath="//input[@name='alias_name']")  
+	WebElement aliasName;
+	
+	@FindBy(xpath="")  
+	WebElement selectDate;
+	
+	@FindBy(xpath="//input[@placeholder='Select date']")  
+	WebElement leaveDate;
+	
+	@FindBy(xpath="//textarea[@name='leave_reason']")  
+	WebElement leaveReason;
+	
+	@FindBy(xpath="//input[@name='source_party']")  
+	WebElement sourceParty;
+	
+	
+	@FindBy(xpath="//input[@name='phone_two']")  
+	WebElement phoneTwo;
+	
+	@FindBy(xpath="//input[@name='mobile_one']")  
+	WebElement mobileOne;
+	
+	@FindBy(xpath="//input[@name='mobile_two']")  
+	WebElement mobileTwo;
+	
+	@FindBy(xpath="//input[@name='email_one']")  
+	WebElement emailOne;
+	
+	@FindBy(xpath="//input[@name='email_two']")  
+	WebElement emailTwo;
+	
+	@FindBy(xpath="//input[@name='fax_number']")  
+	WebElement faxNumber;
+	
+	@FindBy(xpath="//input[@name='short_name']")  
+	WebElement shortName;
+	
+
 	
 	
 	
@@ -137,7 +186,7 @@ public void DataEntry_CompanyName()
 		// TODO Auto-generated catch block
 		e1.printStackTrace();
 	}
-	Company_Name.sendKeys(Common_No_random);
+	Company_Name.sendKeys(Common_No_company);
 	Lab_type.click();
 	Vendor_type.click();
 	 Next_btn1.click();
@@ -196,8 +245,8 @@ public void DataEntry_ContactPersonName()
 		e1.printStackTrace();
 	}
 	
-	Contact_Person_Name.sendKeys(Common_No_random);
-	Company_Name.sendKeys(Common_No_random);
+	Contact_Person_Name.sendKeys(Common_No_name);
+	Company_Name.sendKeys(Common_No_company);
 	Lab_type.click();
 	Vendor_type.click();
 	 Next_btn1.click();
@@ -228,11 +277,15 @@ public void DataEntry_ContactPersonName()
 	  ;
 	 
 	
-	 System.out.println(Common_No_random);
+	 System.out.println(Common_No_name);
+	 System.out.println(Common_No_company);
 	 Assert.assertTrue(Record_success_msg.isDisplayed());
 	
-	 
-	 
+}
+
+	public void DataEntry_AllData()
+	{
+		
 	}
 
 

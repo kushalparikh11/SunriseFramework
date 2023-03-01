@@ -1,20 +1,15 @@
 package sunrise.qa.dummy;
 
-import java.awt.AWTException;
-import java.time.Duration;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.github.javafaker.Faker;
 
 public class dummytest  {
 	
 	public static WebDriver driver;
 	
-	@Test
+	/*@Test
     public void eightComponents() throws InterruptedException, AWTException {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(); 
@@ -30,6 +25,14 @@ public class dummytest  {
 		   
         
         
-    }
-
+    }*/
+	
+	@Test
+	public static String test()
+	{		
+		Faker faker = new Faker();
+		String random_email =  faker.internet().emailAddress(); 
+		return random_email;
+		    
+	}
 }
