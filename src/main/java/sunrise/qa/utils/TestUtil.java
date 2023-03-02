@@ -353,4 +353,32 @@ public class TestUtil extends TestBase {
 			
 			return random_address; 
 		}
+		
+		public static String RandomPhoneNumberGenerator()
+		{
+			Faker faker = new Faker();
+			String random_number =  faker.phoneNumber().phoneNumber(); 
+			return random_number;
+		}
+		
+		public static String RandomMobileNumberGenerator()
+		{
+			Faker faker = new Faker();
+			String random_number =  faker.phoneNumber().cellPhone(); 
+			return random_number;
+		}
+		
+		public static String RandomWebsiteGenerator()
+		{
+			Faker faker = new Faker();
+			String random_website =  "https://www."+faker.internet().domainName();  
+			return random_website;
+		}
+		
+		public static String RandomUserIDGenerator()
+		{
+			Faker faker = new Faker();
+			String random_id = "@"+faker.name().username();  
+			return random_id;
+		}
 }

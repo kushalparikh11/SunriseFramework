@@ -31,7 +31,7 @@ public class TestBase {
 		
 		prop = new Properties();
 		try {
-			FileInputStream ip = new FileInputStream("D:\\SunRiseFramework\\SunriseFramework\\src\\main\\java\\sunrise\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\sunrise\\qa\\config\\config.properties");
 		prop.load(ip);
 		
 		} catch (FileNotFoundException e) {

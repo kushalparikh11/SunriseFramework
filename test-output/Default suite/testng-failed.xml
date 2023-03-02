@@ -5,9 +5,9 @@
     <classes>
       <class name="sunrise.qa.testcases.contactpages.ContactPageTest">
         <methods>
+          <include name="Verify_recordAdded_ContactPersonName"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="Verify_recordAdded_CompanyName"/>
         </methods>
       </class> <!-- sunrise.qa.testcases.contactpages.ContactPageTest -->
     </classes>

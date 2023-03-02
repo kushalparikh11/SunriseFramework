@@ -73,5 +73,13 @@ public class ContactPageTest extends TestBase {
 		
 	}
 	
+	@Test(priority=6)
+	public void Verify_DataEntry_AllData() throws InterruptedException
+	{
+		contactpage.DataEntry_AllData(); //With  all data entered.
+		
+	}
+	
+	
 	
 }
